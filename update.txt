@@ -1,0 +1,38 @@
+// update todo
+  if (req.url === "/update-todo" && req.method === "PUT") {
+    const updateTodo = (id: number, newName: string) => {
+      const todoIndex = todos.findIndex((todo) => todo.id === id);
+      if (todoIndex !== -1) {
+        todos[todoIndex].name = newName;
+        return todos[todoIndex];
+      }
+    };
+    const updatedUser = updateTodo(2, "jhone");
+    console.log("update data:", updatedUser);
+    res.write(
+      JSON.stringify({
+        message: "todo update successfully",
+      }),
+    );
+    res.end();
+  }
+
+
+
+
+
+  
+const nums = [1, 10, 2, 4, 5, 7];
+
+// i want to update 2 -> 8
+
+const updatedNums = nums.map((num) => {
+  if (num === 2) {
+    return 8;
+  } else {
+    return num;
+  }
+});
+
+console.log("nums", nums);
+console.log("updatedNums", updatedNums);
