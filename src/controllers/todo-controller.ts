@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { TodoModel } from "../models/todo-model";
-import { parse } from "path";
+
 
 /**
  * This file contains code related to todo controller
