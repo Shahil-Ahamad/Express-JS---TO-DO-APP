@@ -1,6 +1,6 @@
 import { TTodo } from "../models/todo-model";
 
-export  function getTodoView(todo: TTodo) {
+export function getTodoView(todo: TTodo) {
   return `
 <!DOCTYPE html>
 <html lang="en">
