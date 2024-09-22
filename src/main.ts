@@ -7,6 +7,7 @@ import {
   getAllTodoController,
   updateTodoController,
 } from "./controllers/todo-controller";
+import { createTodoFormController } from "./views/create-todo-form";
 
 const PORT = 4000;
 
@@ -17,10 +18,12 @@ app.use(bodyParser.json());
 // Todo:  routes
 
 // get-todo using query
-app.get("/get-todo", getTodoController);
+app.get("/get-todo/:todoId", getTodoController);
 
 // create-todo
 app.post("/create-todo", createTodoController);
+
+app.post("/create-todo", createTodoFormController);
 
 // delete-todo using query
 app.delete("/delete-todo", deleteTodoController);

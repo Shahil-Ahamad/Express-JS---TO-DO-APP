@@ -100,6 +100,10 @@ export function getAllTodoController(
   res.json({
     data: allTodos,
   });
+
+  
+ 
+
 }
 
 export function updateTodoController(
